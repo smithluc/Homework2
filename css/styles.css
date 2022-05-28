@@ -1,0 +1,473 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 1;
+}
+
+@font-face {
+  font-family: Gillbold;
+  src: url(fonts/GillSans-Bold.ttf);
+}
+@font-face {
+  font-family: Gillbolditalic;
+  src: url(fonts/GillSans-BoldItalic.ttf);
+}
+@font-face {
+  font-family: Gillitalic;
+  src: url(fonts/GillSans-Italic.ttf);
+}
+@font-face {
+  font-family: GillLight;
+  src: url(fonts/GillSans-Light.ttf);
+}
+@font-face {
+  font-family: GillLightitalic;
+  src: url(fonts/GillSans-LightItalic.ttf);
+}
+@font-face {
+  font-family: Gillsemibold;
+  src: url(fonts/GillSans-SemiBold.ttf);
+}
+@font-face {
+  font-family: Gillsemibolditalic;
+  src: url(fonts/GillSans-SemiBoldItalic.ttf);
+}
+@font-face {
+  font-family: Gillultrabold;
+  src: url(fonts/GillSans-UltraBold.ttf);
+}
+@font-face {
+  font-family: Gill;
+  src: url(fonts/GillSans.ttf);
+}
+@font-face {
+  font-family: Serifbold;
+  src: url(fonts/PTSerif-Bold.ttf);
+}
+@font-face {
+  font-family: Serifbolditalic;
+  src: url(fonts/PTSerif-BoldItalic.ttf);
+}
+@font-face {
+  font-family: Serifitalic;
+  src: url(fonts/PTSerif-Italic.ttf);
+}
+@font-face {
+  font-family: Serifreg;
+  src: url(fonts/PTSerif-Regular.ttf);
+}
+nav {
+  width: 980px;
+  height: 90px;
+  position: fixed;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  border-bottom: solid 2px white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: 2px;
+}
+nav .logo {
+  position: relative;
+  width: 92px;
+  height: 38px;
+}
+nav .logo span {
+  position: absolute;
+  bottom: -6px;
+  color: white;
+  font-family: Gill;
+  font-size: 20px;
+  width: 73px;
+  height: 23px;
+}
+nav .links {
+  width: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+nav .links a {
+  text-decoration: none;
+  color: white;
+  font-family: Gill;
+  font-size: 15px;
+}
+nav .links span {
+  color: #ee4367;
+}
+
+.hero {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 209, 64, 0.8)), to(rgba(255, 209, 64, 0.8))), url(../images/hero.jpg);
+  background-image: linear-gradient(to bottom, rgba(255, 209, 64, 0.8), rgba(255, 209, 64, 0.8)), url(../images/hero.jpg);
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.hero .centered-content {
+  text-align: center;
+}
+.hero .centered-content h1 {
+  color: white;
+  font-family: Serifreg;
+  font-weight: 400;
+  font-size: 38px;
+  padding-bottom: 10px;
+  padding-top: 75px;
+}
+.hero .centered-content h2 {
+  font-family: Gillitalic;
+  font-style: italic;
+  color: #EE4367;
+  padding-bottom: 48px;
+  font-weight: 250;
+  font-size: 20px;
+}
+.hero .centered-content p {
+  font-family: Gillitalic;
+  font-style: italic;
+  color: white;
+  padding-bottom: 48px;
+  font-size: 20px;
+  width: 416px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.hero .centered-content button {
+  width: 120px;
+  height: 40px;
+  background-color: #EE4367;
+  color: white;
+  border: none;
+  font-family: Gill;
+  font-size: 15px;
+}
+
+.quote {
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.quote .content {
+  width: 789px;
+}
+.quote .content .quote-text {
+  font-family: Gillsemibolditalic;
+  font-style: italic;
+  padding-bottom: 40px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #FFD140;
+  line-height: 1.6;
+  letter-spacing: 1px;
+}
+.quote .content .author {
+  color: #ee4367;
+  margin-bottom: 0px;
+  font-family: Serifreg;
+  font-size: 15px;
+  padding-bottom: 7px;
+}
+.quote .content .title {
+  font-size: 10px;
+  font-family: Serifreg;
+  color: #A8A8A8;
+}
+
+.upcoming-events {
+  height: 320px;
+  background-color: #540d6e;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 0 40px;
+}
+.upcoming-events .title {
+  margin-top: -30px;
+  height: 35px;
+  width: 392px;
+  border-bottom: solid 2px white;
+  padding-bottom: 40px;
+  font-family: Gill;
+  font-size: 25px;
+}
+.upcoming-events h1 {
+  color: white;
+  font-family: Gill;
+  letter-spacing: 3px;
+  font-size: 25px;
+  font-weight: 300;
+}
+.upcoming-events .events {
+  height: 124px;
+  margin-top: -120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.upcoming-events .events .event {
+  width: 215px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.upcoming-events .events .event .date {
+  width: 60px;
+  height: 60px;
+  background-color: #ee4367;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: Gillbold;
+  font-weight: bold;
+  font-size: 22px;
+  text-align: center;
+  padding-top: 10px;
+}
+.upcoming-events .events .event .date .month {
+  font-family: Gilllight;
+  font-size: 12px;
+  font-weight: 100;
+}
+.upcoming-events .events .event .event-detail {
+  width: 140px;
+  font-family: Gill;
+  font-size: 13px;
+}
+.upcoming-events .events .event .event-detail .highlight {
+  font-size: 15px;
+  padding-bottom: 15px;
+}
+.upcoming-events .events .event .event-detail .details {
+  color: #ee4367;
+  font-size: 13px;
+}
+
+footer {
+  height: 455px;
+  background-color: #ee4367;
+}
+footer .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 35px;
+}
+footer .addy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: Gill;
+  font-size: 16px;
+  font-weight: 100;
+  color: white;
+  padding-top: 50px;
+}
+footer .number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: Gill;
+  font-size: 16px;
+  font-weight: 100;
+  color: white;
+  padding-top: 6px;
+}
+footer .email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: Gill;
+  font-size: 16px;
+  font-weight: 100;
+  color: white;
+  padding-top: 6px;
+  padding-bottom: 50px;
+}
+footer .signup {
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+footer .signup input {
+  width: 529px;
+  height: 100%;
+  background-color: #f56b88;
+  border: none;
+  color: rgb(238, 67, 103);
+  font-size: 16px;
+  padding-left: 15px;
+}
+footer .signup ::-webkit-input-placeholder {
+  color: rgb(197, 197, 197);
+  opacity: 1;
+  font-family: Gill;
+}
+footer .signup ::-moz-placeholder {
+  color: rgb(197, 197, 197);
+  opacity: 1;
+  font-family: Gill;
+}
+footer .signup :-ms-input-placeholder {
+  color: rgb(197, 197, 197);
+  opacity: 1;
+  font-family: Gill;
+}
+footer .signup ::-ms-input-placeholder {
+  color: rgb(197, 197, 197);
+  opacity: 1;
+  font-family: Gill;
+}
+footer .signup ::placeholder {
+  color: rgb(197, 197, 197);
+  opacity: 1;
+  font-family: Gill;
+}
+footer .signup .button {
+  width: 167px;
+  height: 100%;
+  background-color: white;
+  font-family: Gill;
+  color: #EE4367;
+  font-size: 16px;
+  text-align: center;
+  padding-top: 20px;
+  letter-spacing: 2px;
+}
+footer .socialmedia {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 25px;
+  margin: auto;
+  width: 10%;
+}
+footer .socialmedia .fb {
+  width: 30px;
+  height: 30px;
+  background-color: #EE4367;
+}
+footer .socialmedia .ig {
+  height: 30px;
+  width: 30px;
+  background-color: #EE4367;
+}
+footer .socialmedia .tw {
+  width: 30px;
+  height: 30px;
+  background-color: #EE4367;
+}
+footer p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #FFFFFF;
+  font-family: Gill;
+  font-size: 12px;
+  padding-top: 55px;
+  color: #c3c3c3;
+}
