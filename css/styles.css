@@ -71,13 +71,15 @@ p {
   font-family: Serifreg;
   src: url(fonts/PTSerif-Regular.ttf);
 }
-nav {
-  width: 980px;
+.nav-wrapper {
   height: 90px;
+  width: 100%;
   position: fixed;
-  left: 50%;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
+}
+.nav-wrapper nav {
+  max-width: 980px;
+  height: 90px;
+  margin: 0 auto;
   border-bottom: solid 2px white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -90,12 +92,12 @@ nav {
           align-items: center;
   letter-spacing: 2px;
 }
-nav .logo {
+.nav-wrapper nav .logo {
   position: relative;
   width: 92px;
   height: 38px;
 }
-nav .logo span {
+.nav-wrapper nav .logo span {
   position: absolute;
   bottom: -6px;
   color: white;
@@ -104,7 +106,7 @@ nav .logo span {
   width: 73px;
   height: 23px;
 }
-nav .links {
+.nav-wrapper nav .links {
   width: 350px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -112,16 +114,21 @@ nav .links {
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
-nav .links a {
+.nav-wrapper nav .links a {
   text-decoration: none;
   color: white;
   font-family: Gill;
   font-size: 15px;
 }
-nav .links span {
+.nav-wrapper nav .links span {
   color: #ee4367;
 }
 
+@media only all and (max-width: 980px) {
+  .nav-wrapper nav {
+    padding: 0 30px;
+  }
+}
 .hero {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 209, 64, 0.8)), to(rgba(255, 209, 64, 0.8))), url(../images/hero.jpg);
   background-image: linear-gradient(to bottom, rgba(255, 209, 64, 0.8), rgba(255, 209, 64, 0.8)), url(../images/hero.jpg);
@@ -216,23 +223,18 @@ nav .links span {
   color: #A8A8A8;
 }
 
+@media (max-width: 880px) {
+  .quote {
+    height: 350px;
+    padding: 0 50px;
+  }
+}
 .upcoming-events {
-  height: 320px;
   background-color: #540d6e;
   color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  padding: 0 40px;
+  padding: 50px;
 }
 .upcoming-events .title {
-  margin-top: -30px;
   height: 35px;
   width: 392px;
   border-bottom: solid 2px white;
@@ -240,7 +242,7 @@ nav .links span {
   font-family: Gill;
   font-size: 25px;
 }
-.upcoming-events h1 {
+.upcoming-events .title h1 {
   color: white;
   font-family: Gill;
   letter-spacing: 3px;
@@ -248,8 +250,7 @@ nav .links span {
   font-weight: 300;
 }
 .upcoming-events .events {
-  height: 124px;
-  margin-top: -120px;
+  margin-top: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -259,7 +260,7 @@ nav .links span {
 }
 .upcoming-events .events .event {
   width: 215px;
-  height: 100%;
+  height: 124px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -303,6 +304,19 @@ nav .links span {
   font-size: 13px;
 }
 
+@media (max-width: 1140px) {
+  .upcoming-events .events {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 210px;
+    margin: 50px auto;
+  }
+  .upcoming-events .events .event {
+    margin-bottom: 20px;
+  }
+}
 footer {
   height: 455px;
   background-color: #ee4367;
@@ -470,4 +484,14 @@ footer p {
   font-size: 12px;
   padding-top: 55px;
   color: #c3c3c3;
+}
+
+@media (max-width: 1000px) {
+  footer .signup {
+    padding: 0 50px;
+  }
+  footer .socialmedia {
+    margin: auto;
+    width: 150px;
+  }
 }

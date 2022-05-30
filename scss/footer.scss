@@ -118,3 +118,15 @@ footer {
         color: #c3c3c3;
     }
 }
+
+@media (max-width: 1000px) {
+    footer {
+        .signup {
+            padding: 0 50px;
+        }
+        .socialmedia {
+            margin: auto;
+            width: 150px;
+        }
+    }
+}
